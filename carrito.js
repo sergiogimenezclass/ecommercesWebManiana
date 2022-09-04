@@ -10,6 +10,13 @@ let myCart = function cart() {
     carrito.cliente = ""
 
     console.log(carrito)
+
+    // Objeto Cliente
+    let cliente = {}
+    cliente.nombre = ""
+    cliente.foto = ""
+
+    console.log(cliente)
 }
 
 myCart()
