@@ -29,3 +29,16 @@ let myCart = function cart() {
 }
 
 myCart()
+
+let getProductos = function() {
+    console.log('------Antes de convertirlo')
+    console.log(localStorage.getItem('producto'))
+    console.log('------Despues de convertirlo')
+    let producto = JSON.parse(localStorage.getItem('producto'))
+    console.log(producto)
+    document.querySelector('.item-name').innerHTML = producto.marca
+    document.querySelector('.item-price').innerHTML = producto.precio
+    document.querySelector('.item-desc').innerHTML = producto.descripcion
+}
+
+getProductos()
