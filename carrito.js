@@ -24,7 +24,8 @@ let myCart = function cart() {
     tarjeta.titular = ""
     tarjeta.expiracion = ""
     tarjeta.cvv = 000
-    
+
+    console.log(tarjeta)
 }
 
 myCart()
