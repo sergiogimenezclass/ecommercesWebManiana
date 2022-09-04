@@ -17,6 +17,14 @@ let myCart = function cart() {
     cliente.foto = ""
 
     console.log(cliente)
+
+    // Objeto tarjeta de credito
+    let tarjeta = {}
+    tarjeta.numero = 0
+    tarjeta.titular = ""
+    tarjeta.expiracion = ""
+    tarjeta.cvv = 000
+    
 }
 
 myCart()
