@@ -13,8 +13,22 @@ let armar_producto = function() {
     producto.nombre = document.querySelector('.nombre').innerHTML
     console.log(producto)
     
+    let listado = []
+    listado.push(producto)
+    if (localStorage.getItem('producto')) {
+        // trabajamos con version que haya del localStorage
+        listado = JSON.parse(localStorage.getItem('producto'))
+    }
+    if (localStorage.getItem('producto')) {
+        // Existe el array en el localStorage
+        listado.push(producto)
+        localStorage.setItem('producto', JSON.stringify(listado))
+    } else {
+        // No esta definido en el localStorage. Hay que crearlo
+        localStorage.setItem('producto', JSON.stringify(listado))
+    }
+    console.log(listado)
     
-    localStorage.setItem('producto', JSON.stringify(producto))
 
     // Marca
     // Precio
